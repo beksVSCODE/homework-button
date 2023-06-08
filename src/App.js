@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useState} from 'react';
+import Buttons from './Buttons';
+
 
 function App() {
+const [change,setChange] =  useState(document.querySelector('body'))
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+     <div className='wrapper__container container'>
+        <Buttons color="red" fn={change}/>
+        <Buttons color="green" fn={change}/>
+        <Buttons color="black" fn={change}/>
+        <Buttons color="yellow" fn={change}/>
+        <Buttons color="pink" fn={change}/>
+        <Buttons color="purple" fn={change}/>
+        <Buttons color="orange" fn={change}/>
+        <Buttons color="brown" fn={change}/>
+        <Buttons color="lime" fn={change}/>
+        <Buttons color="blue" fn={change}/>
+        <Buttons color="white" fn={change}/>
+     </div>
     </div>
   );
 }
